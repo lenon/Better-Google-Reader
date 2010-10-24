@@ -1,0 +1,23 @@
+{
+    "name": "Better Google Reader",
+    "description": "Improves the Google Reader interface",
+    "icons": {
+        "48": "images/icon.png"
+    },
+    "version": "1.2.3",
+    "content_scripts": [{
+        "css": [
+            "css/reader.css"
+        ],
+        "js": [
+            "js/jquery.js",
+            "js/reader.js"
+        ],
+        "matches": [
+            "*://www.google.com/reader/view/*",
+            "*://www.google.com.br/reader/view/*",
+            "*://www.google.com.ar/reader/view/*"
+        ],
+        "run_at": "document_start"
+    }]
+}
