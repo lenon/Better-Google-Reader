@@ -184,15 +184,25 @@ html body #chrome-viewer-container {
 html body #chrome-lhn-toggle {
     position: absolute;
     display: block;
-    bottom: 0;
+    top: 50%;
     left: 0;
     height: 100px;
     width: 12px;
     border: 1px solid #c2cff1;
-    border-width: 1px 1px 0 0;
-    border-radius: 0 5px 0 0;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 5px 5px 0;
     z-index: 2;
 }
+
+    html body #chrome-lhn-toggle:hover {
+        width: 18px;
+        margin-left: -6px;
+        border-radius: 5px;
+    }
+
+    html body #chrome-lhn-toggle:hover #chrome-lhn-toggle-icon {
+        margin-left: 10px;
+    }
 
 html body #chrome-lhn-toggle-icon {
     margin-left: 4px;
@@ -319,4 +329,21 @@ body #current-entry .card {
 body #entries-status {
     right: 25px;
     width: auto;
+}
+
+#entries .entry-likers {
+    display: none;
+}
+
+.entry-twitter-iframe {
+    display: inline-block;
+    vertical-align: middle;
+    width: 110px;
+    height: 20px;
+    margin: 0 0 0 10px;
+    visibility: hidden;
+}
+
+.entry:hover .entry-twitter-iframe {
+    visibility: visible;
 }
